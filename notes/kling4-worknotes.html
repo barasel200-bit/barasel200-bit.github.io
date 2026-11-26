@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean-language prompting for motion-heavy shots</title>
+<meta name="description" content="Korean prompts tend to specify relationships more precisely than English ones and camera behaviour less precisely. That is a habit, not a limitation,">
+<link rel="canonical" href="https://barasel200-bit.github.io/notes/kling4-worknotes.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 42rem; margin: 3rem auto; padding: 0 1.2rem;
+         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.6rem; line-height: 1.28; margin-bottom: .3rem; }
+  .meta { font-size: .85rem; opacity: .6; margin-bottom: 1.6rem; }
+  a { color: inherit; }
+  footer { margin-top: 2.8rem; font-size: .9rem; opacity: .65; }
+</style>
+</head>
+<body>
+<nav><a href="../">← AI video field notes</a></nav>
+<h1>Korean-language prompting for motion-heavy shots</h1>
+<div class="meta">2026-11-26 · working notes</div>
+<p>Korean prompts tend to specify relationships more precisely than English ones and camera behaviour less precisely. That is a habit, not a limitation, but it changes how you should write. Put the subject and the action in Korean, and put the camera instruction in short, explicit phrases even if the rest of the prompt stays in Korean.</p>
+<p>Motion-heavy shots fail in predictable ways: limbs multiply, fabric melts, and the camera drifts sideways when it should push in. Each of those is easier to prevent than to fix. Ask for a single movement, name the direction, and give the shot a duration. Korean users of <a href="https://kling4.co.kr/">Kling 4</a> tend to write longer prompts than English users, which helps with subject detail and hurts with camera clarity.</p>
+<p>Test one movement per generation. Walking plus turning plus gesturing is three movements, and most models will pick two. If the shot needs all three, split it and cut between them, which is what a film would do anyway.</p>
+<p>Keep a phrasebook of camera instructions that worked, in both languages. Over a few weeks it becomes the most valuable file on the project, because it encodes what this particular model understands rather than what the documentation claims.</p>
+<p>Record failures as carefully as successes, with the prompt and the exact artefact. Multilingual prompting advice is mostly folklore, and a personal list of what broke is more reliable than any guide written from demos.</p>
+<p>Note the artefact and the prompt together, or the note is useless a month later.</p>
+<footer>Working notes on AI video tools. Written and maintained by the site author; no sponsored placement.</footer>
+</body>
+</html>

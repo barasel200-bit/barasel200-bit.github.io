@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What open weights change for a small video team</title>
+<meta name="description" content="Open weights are usually sold as freedom and delivered as homework. The honest question is not whether you can run the model, but whether you can run">
+<link rel="canonical" href="https://barasel200-bit.github.io/notes/wan3-worknotes.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 42rem; margin: 3rem auto; padding: 0 1.2rem;
+         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.6rem; line-height: 1.28; margin-bottom: .3rem; }
+  .meta { font-size: .85rem; opacity: .6; margin-bottom: 1.6rem; }
+  a { color: inherit; }
+  footer { margin-top: 2.8rem; font-size: .9rem; opacity: .65; }
+</style>
+</head>
+<body>
+<nav><a href="../">← AI video field notes</a></nav>
+<h1>What open weights change for a small video team</h1>
+<div class="meta">2026-11-26 · working notes</div>
+<p>Open weights are usually sold as freedom and delivered as homework. The honest question is not whether you can run the model, but whether you can run it often enough to matter. A model that needs a rented GPU for every experiment is open in licence and closed in practice.</p>
+<p>The teams that benefit most are the ones with a fixed visual style and a lot of repetition: product catalogues, real estate walkthroughs, training clips. For those, a model you can fine-tune or prompt with a locked seed beats a stronger model you can only call through a queue. <a href="https://wan-3.io/">Wan 3</a> is interesting for that reason rather than for benchmark scores.</p>
+<p>Budget for the boring parts. Storage, queue management and a way to compare runs cost more attention than the model itself, and without them the weights sit unused after the first week. A shared folder of approved seeds and prompts is worth more than a second GPU.</p>
+<p>Keep a closed model as a fallback for the shots your setup cannot handle. The point of open weights is not purity, it is having a second option when a shot refuses to work and a deadline does not move.</p>
+<p>Document the install once, properly. The week you spend writing down versions, paths and prompt presets is the week that decides whether the setup survives a team change or quietly dies when the person who built it moves on.</p>
+<p>Keep a written list of shots your local setup handles badly; it will be shorter than you expect and more useful than any benchmark.</p>
+<footer>Working notes on AI video tools. Written and maintained by the site author; no sponsored placement.</footer>
+</body>
+</html>

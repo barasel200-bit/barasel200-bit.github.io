@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judging a browser video model before you trust it with a client clip</title>
+<meta name="description" content="Most browser video tools look convincing on the demo reel and fall apart on the third generation. The useful test is not the first output but the fift">
+<link rel="canonical" href="https://barasel200-bit.github.io/notes/h3video-worknotes.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 42rem; margin: 3rem auto; padding: 0 1.2rem;
+         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.6rem; line-height: 1.28; margin-bottom: .3rem; }
+  .meta { font-size: .85rem; opacity: .6; margin-bottom: 1.6rem; }
+  a { color: inherit; }
+  footer { margin-top: 2.8rem; font-size: .9rem; opacity: .65; }
+</style>
+</head>
+<body>
+<nav><a href="../">← AI video field notes</a></nav>
+<h1>Judging a browser video model before you trust it with a client clip</h1>
+<div class="meta">2026-11-26 · working notes</div>
+<p>Most browser video tools look convincing on the demo reel and fall apart on the third generation. The useful test is not the first output but the fifth: same prompt, small changes, and a check on whether the model keeps the subject, the framing and the light consistent. If the face drifts or the background reorganises itself every run, the tool is a toy for that shot.</p>
+<p>A practical routine is to write one prompt with three variables: subject, camera move and duration. Generate each variable twice and compare. Models that hold the subject but lose the camera move are still usable for cutaways; models that lose the subject are not usable for anything with a face. Notes and test renders for this kind of check are collected at <a href="https://h3video.org/">H3 Video</a>, where the runs are kept side by side rather than cherry-picked.</p>
+<p>Watch the edges. Browser renders often soften hair, fingers and thin straps first, and those artefacts survive compression badly. Export a single frame at full size and look at it before you look at the video, because motion hides a lot of damage that a still frame exposes immediately.</p>
+<p>Finally, time the loop. A model that takes ninety seconds for four seconds of footage is fine for a storyboard and useless for a revision session with a client on the call. Decide which of those two jobs you are doing before you pick the tool, and keep a second option ready for the other one.</p>
+<p>A simple pass mark helps: if three of five runs keep the same face and the same framing, the model is ready for cutaways and reactions. If it is two of five, keep it for establishing shots where nobody looks closely. Write the number down, because memory flatters new tools.</p>
+<footer>Working notes on AI video tools. Written and maintained by the site author; no sponsored placement.</footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading a prompt-adherence test without fooling yourself</title>
+<meta name="description" content="Prompt adherence tests are easy to rig by accident. If the prompt says a red jacket and the output shows a red jacket, that proves very little, becaus">
+<link rel="canonical" href="https://barasel200-bit.github.io/notes/seedance25-worknotes.html">
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 42rem; margin: 3rem auto; padding: 0 1.2rem;
+         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.6rem; line-height: 1.28; margin-bottom: .3rem; }
+  .meta { font-size: .85rem; opacity: .6; margin-bottom: 1.6rem; }
+  a { color: inherit; }
+  footer { margin-top: 2.8rem; font-size: .9rem; opacity: .65; }
+</style>
+</head>
+<body>
+<nav><a href="../">← AI video field notes</a></nav>
+<h1>Reading a prompt-adherence test without fooling yourself</h1>
+<div class="meta">2026-11-26 · working notes</div>
+<p>Prompt adherence tests are easy to rig by accident. If the prompt says a red jacket and the output shows a red jacket, that proves very little, because red jackets are common in training data. The test only means something when the prompt contains a relationship: the jacket is wet, the jacket is two sizes too large, the jacket is the only red object in a grey street.</p>
+<p>Build a small set of relational prompts and keep them fixed across models. Score each output on whether the relationship survived, not on whether the image is attractive. A model that produces an ugly but correct frame is more useful than one that produces a beautiful frame that ignored the instruction, because you can fix ugly with lighting and you cannot fix ignored with anything. Korean-language notes on these runs sit alongside the English ones at <a href="https://seedance25.kr/">Seedance 2.5</a>.</p>
+<p>Check negatives separately. Most tools handle &quot;no text&quot; and &quot;no extra fingers&quot; badly, and their failure mode is quiet: the frame looks fine until you notice the sign in the background. Test one negative per run so you know which one broke.</p>
+<p>Keep a written log with the prompt, the seed and a one-line verdict. After twenty runs the log tells you more about a model than any leaderboard, because it reflects the shots you actually need rather than the shots a benchmark chose.</p>
+<p>One more habit: rerun the same prompt after a week. Providers swap checkpoints quietly, and a prompt that worked in October can fail in November with no announcement. A dated log catches that before a client does.</p>
+<footer>Working notes on AI video tools. Written and maintained by the site author; no sponsored placement.</footer>
+</body>
+</html>
